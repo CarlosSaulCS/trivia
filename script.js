@@ -60,7 +60,8 @@ class F1HeartsTrivia {
     }
 
     loadQuestions() {
-        this.gameQuestions = [
+        // Pool of all available questions
+        const allQuestions = [
             {
                 question: "Which F1 drivers currently share the record for most World Championships?",
                 answers: [
@@ -70,7 +71,7 @@ class F1HeartsTrivia {
                     "Sebastian Vettel and Fernando Alonso (4 each)"
                 ],
                 correct: 0,
-                funFact: "Lewis Hamilton and Michael Schumacher both have 7 world titles. Hamilton achieved this feat across two different eras of F1, showing incredible adaptability and longevity in the sport. 🏆�️"
+                funFact: "Lewis Hamilton and Michael Schumacher both have 7 world titles. Hamilton achieved this feat across two different eras of F1, showing incredible adaptability and longevity in the sport. 🏆️"
             },
             {
                 question: "What does DRS stand for in Formula 1?",
@@ -81,7 +82,7 @@ class F1HeartsTrivia {
                     "Driver Regulation System"
                 ],
                 correct: 1,
-                funFact: "DRS allows drivers to open their rear wing to reduce drag on straights. This technology was introduced in 2011 to promote overtaking and make races more exciting for fans. 🏎️�"
+                funFact: "DRS allows drivers to open their rear wing to reduce drag on straights. This technology was introduced in 2011 to promote overtaking and make races more exciting for fans. 🏎️"
             },
             {
                 question: "Which circuit is famously known as 'The Temple of Speed'?",
@@ -92,7 +93,7 @@ class F1HeartsTrivia {
                     "Spa-Francorchamps (Belgium)"
                 ],
                 correct: 2,
-                funFact: "Monza has been hosting F1 since 1950 and features the longest straights on the calendar. The circuit is famous for its passionate Italian fans and incredible racing atmosphere. 🏛️🇮�"
+                funFact: "Monza has been hosting F1 since 1950 and features the longest straights on the calendar. The circuit is famous for its passionate Italian fans and incredible racing atmosphere. 🏛️🇮"
             },
             {
                 question: "What is the minimum weight requirement for an F1 car including the driver in 2024?",
@@ -114,7 +115,7 @@ class F1HeartsTrivia {
                     "Qatar Grand Prix (2021)"
                 ],
                 correct: 1,
-                funFact: "Las Vegas GP joined in 2023 as the newest addition. The race takes place on Saturday night local time, making it unique as most F1 races occur on Sundays. 🎰�"
+                funFact: "Las Vegas GP joined in 2023 as the newest addition. The race takes place on Saturday night local time, making it unique as most F1 races occur on Sundays. 🎰"
             },
             {
                 question: "How many power unit components can an F1 driver use per season without penalty?",
@@ -147,7 +148,7 @@ class F1HeartsTrivia {
                     "Mercedes-AMG"
                 ],
                 correct: 1,
-                funFact: "Ferrari has been in F1 since the championship began in 1950, making them the oldest and most successful team in the sport's history. Their iconic logo represents power and elegance. 🐎�️"
+                funFact: "Ferrari has been in F1 since the championship began in 1950, making them the oldest and most successful team in the sport's history. Their iconic logo represents power and elegance. 🐎️"
             },
             {
                 question: "Which constructor has won the most Formula 1 Constructors' Championships?",
@@ -170,8 +171,100 @@ class F1HeartsTrivia {
                 ],
                 correct: 1,
                 funFact: "Valtteri Bottas hit 397.3 km/h at Baku in 2016. F1 cars are so aerodynamically advanced that they could theoretically drive upside down at speeds above 180 km/h. 🌐💨"
+            },
+            {
+                question: "Which famous F1 corner is known as 'Eau Rouge'?",
+                answers: [
+                    "Monaco - Casino Corner",
+                    "Silverstone - Copse Corner",
+                    "Spa-Francorchamps - Eau Rouge",
+                    "Suzuka - 130R"
+                ],
+                correct: 2,
+                funFact: "Eau Rouge at Spa is one of F1's most iconic corners. Drivers take this uphill, left-right-left sequence at over 300 km/h, requiring incredible courage and precision. It separates the truly great drivers from the good ones. 🎢🏁"
+            },
+            {
+                question: "How many points does a race winner receive in Formula 1?",
+                answers: [
+                    "20 points",
+                    "25 points",
+                    "30 points",
+                    "15 points"
+                ],
+                correct: 1,
+                funFact: "Race winners get 25 points, with points awarded down to 10th place. The current points system was introduced in 2010. There's also 1 additional point for the fastest lap if you finish in the top 10. 🏆📊"
+            },
+            {
+                question: "Which F1 driver has the most pole positions in history?",
+                answers: [
+                    "Michael Schumacher (68)",
+                    "Ayrton Senna (65)",
+                    "Lewis Hamilton (104)",
+                    "Sebastian Vettel (57)"
+                ],
+                correct: 2,
+                funFact: "Lewis Hamilton holds the record with 104 pole positions. His qualifying speed and racecraft have been consistently exceptional throughout his career, often finding those extra tenths when it matters most. ⚡🥇"
+            },
+            {
+                question: "What is the maximum fuel capacity allowed in an F1 car during a race?",
+                answers: [
+                    "100 kg",
+                    "110 kg", 
+                    "120 kg",
+                    "130 kg"
+                ],
+                correct: 1,
+                funFact: "F1 cars can carry a maximum of 110kg of fuel for the race. Teams must carefully balance fuel load with performance, as more fuel means more weight but fewer pit stops. It's all about strategy! ⛽🧮"
+            },
+            {
+                question: "Which circuit holds the record for the shortest F1 race track?",
+                answers: [
+                    "Monaco (3.337 km)",
+                    "Zandvoort (4.259 km)",
+                    "Hungaroring (4.381 km)",
+                    "Red Bull Ring (4.318 km)"
+                ],
+                correct: 0,
+                funFact: "Monaco is the shortest track at just 3.337km, but it's the most prestigious race on the calendar. The narrow streets make overtaking nearly impossible, so qualifying position is crucial. It's called the 'Monaco Lottery' for a reason! 🎰🏰"
+            },
+            {
+                question: "How many gears do modern F1 cars have?",
+                answers: [
+                    "6 forward gears",
+                    "7 forward gears",
+                    "8 forward gears",
+                    "9 forward gears"
+                ],
+                correct: 2,
+                funFact: "F1 cars have 8 forward gears and 1 reverse gear. The gearbox must last several race weekends, and drivers shift hundreds of times per race using paddle shifters behind the steering wheel. ⚙️🔄"
+            },
+            {
+                question: "Which F1 team has won the most races in history?",
+                answers: [
+                    "Ferrari (245+ wins)",
+                    "McLaren (183+ wins)",
+                    "Mercedes (125+ wins)",
+                    "Red Bull Racing (95+ wins)"
+                ],
+                correct: 0,
+                funFact: "Ferrari has won over 245 Grand Prix races since 1950. Their rich history, passionate fans, and iconic red cars have made them the most successful team in F1 history. Forza Ferrari! 🏎️❤️"
+            },
+            {
+                question: "What does the black flag with orange circle mean in F1?",
+                answers: [
+                    "Car disqualified",
+                    "Mechanical problem - pit immediately",
+                    "Last warning for driving standards",
+                    "Track surface issue"
+                ],
+                correct: 1,
+                funFact: "The black flag with orange circle means the car has a mechanical problem and must return to the pits immediately. It's usually shown for loose bodywork or other safety concerns that could affect other drivers. 🚩🔧"
             }
         ];
+
+        // Randomly select 10 questions from the pool
+        const shuffled = allQuestions.sort(() => 0.5 - Math.random());
+        this.gameQuestions = shuffled.slice(0, 10);
     }
 
     bindEvents() {
@@ -366,19 +459,16 @@ class F1HeartsTrivia {
                 // Show final message
                 setTimeout(() => {
                     finalGiftMessage.innerHTML = `
-                        <h4 style="margin-top: 0; color: #fff;">💕 Congratulations, Evita! 💕</h4>
+                        <h4 style="margin-top: 0; color: #fff;">💕 Wow, Evita! You absolutely nailed it! 💕</h4>
                         <p style="font-size: 16px; line-height: 1.6; margin: 15px 0;">
-                            Your perfect score has unlocked something very special! 🌟<br><br>
-                            Like a true F1 champion, you've mastered every turn and claimed my heart. 
-                            I've been preparing a surprise gift just for you! 🎁✨<br><br>
-                            <strong>🚚 Delivery Status:</strong> Your surprise will arrive this weekend 
-                            (Saturday or Sunday) - I'm still coordinating the perfect timing! 📅<br><br>
-                            Each question was crafted with F1 facts and my genuine thoughts about you. 
-                            This perfect score proves we're perfectly synchronized! 🏎️💫<br><br>
-                            <em>Get ready for your surprise, beautiful! 💝</em>
+                            I can't believe you got every single question right! 🌟 You really know your F1 stuff, and honestly, that makes you even more amazing to me.<br><br>
+                            So... I have to confess something. While I was creating this trivia, I kept thinking about you and got a little carried away. I may have ordered you a surprise gift. 🎁✨<br><br>
+                            <strong>🚚 About that gift:</strong> It's already on its way to you! I know, I know - I probably should have asked first, but I saw something that reminded me of you and I just couldn't resist. The timing will be a surprise too! 📅<br><br>
+                            Every question here was me trying to share something I love (F1) while thinking about someone I really care about (you). This perfect score just proves we're on the same wavelength! 🏎️💫<br><br>
+                            <em>I hope you like surprises... because one is definitely coming your way! 💝</em>
                         </p>
                         <button onclick="location.reload()" style="margin-top: 15px; padding: 12px 24px; background: #fff; color: #6c5ce7; border: none; border-radius: 25px; font-weight: bold; cursor: pointer; font-size: 14px;">
-                            🏁 Race Again
+                            🏁 Want to race again?
                         </button>
                     `;
                     finalGiftMessage.style.display = 'block';

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1 Hearts Trivia - For Evita ❤️</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Racing+One&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="title">🏎️ F1 Hearts Trivia 💕</h1>
+            <p class="subtitle">Racing through questions to unlock messages for someone special...</p>
+        </header>
+
+        <div class="game-area">
+            <div class="progress-section">
+                <div class="score-container">
+                    <span class="score">Score: <span id="score">0</span></span>
+                    <span class="hearts">💖 <span id="hearts">5</span></span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <p class="progress-text">Messages unlocked: <span id="messagesUnlocked">0</span>/10</p>
+            </div>
+
+            <div class="question-container" id="questionContainer">
+                <div class="question-number">Question <span id="questionNumber">1</span></div>
+                <h2 class="question" id="question">Loading your first question...</h2>
+                <div class="answers" id="answers">
+                    <!-- Answers will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <div class="secret-message" id="secretMessage" style="display: none;">
+                <div class="message-header">💕 Secret Message Unlocked! 💕</div>
+                <div class="message-content" id="messageContent"></div>
+                <button class="next-button" id="nextButton">Continue Racing 🏁</button>
+            </div>
+
+            <div class="game-over" id="gameOver" style="display: none;">
+                <h2>🏆 Race Complete! 🏆</h2>
+                <p class="final-message" id="finalMessage"></p>
+                <button class="restart-button" id="restartButton">Start New Race 🔄</button>
+            </div>
+        </div>
+
+        <div class="trivia-info">
+            <p class="info-text">
+                🌟 Each correct answer unlocks fascinating facts and thoughtful insights ✨
+            </p>
+            <div class="powered-by">Powered By Code Solutions Studio</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

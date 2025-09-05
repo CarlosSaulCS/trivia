@@ -1,4 +1,4 @@
-// F1 Hearts Trivia Game 💕
+// F1 Hear                 "F1 has raced on some of the world's most iconic circuits for decades. Some treasures are worth protecting and cherishing, their beauty growing more apparent with each passing season, just like my feelings for you. 🏁📚",      "F1 technology often finds its way into everyday life - from carbon fiber to energy recovery systems. Innovation connects different worlds in unexpected ways, just like how you've connected with my thoughts across the miles. 🔧💻",s Trivia Game 💕
 class F1HeartsTrivia {
     constructor() {
         this.currentQuestion = 0;
@@ -7,16 +7,16 @@ class F1HeartsTrivia {
         this.messagesUnlocked = 0;
         this.gameQuestions = [];
         this.secretMessages = [
-            "Formula 1 is about precision and timing. Speaking of timing, they say the best things happen when you least expect them. Sometimes the most beautiful connections happen across unexpected distances. 🏎️✨",
+            "Formula 1 is about precision and timing. Speaking of timing, they say the best things happen when you least expect them. Sometimes the most beautiful connections happen across unexpected distances, Evita. 🏎️✨",
             "F1 technology often finds its way into everyday life - from carbon fiber to energy recovery systems. Innovation connects different worlds in unexpected ways. ��💻",
-            "In F1, champions are remembered not just for their wins, but for their grace under pressure. True champions inspire others and make the impossible seem effortless. Some people have that same natural elegance. 🏆⭐",
-            "The technology behind F1 cars is incredible - each car has over 300 sensors collecting data. Sometimes the most extraordinary discoveries happen when we pay attention to the details. ✨🔬",
-            "Did you know F1 teams can change all four wheels in under 3 seconds? Each component working in perfect harmony. Sometimes in life, you discover something rare and beautiful that stands apart from everything else. ⚡💎",
-            "F1 engineering combines art and science - every component designed with purpose and beauty. Some things in life are just naturally well-designed, possessing both intelligence and grace. 🔧🎨",
+            "In F1, champions are remembered not just for their wins, but for their grace under pressure. True champions inspire others and make the impossible seem effortless. You have that same natural elegance, Evita. 🏆⭐",
+            "The technology behind F1 cars is incredible - each car has over 300 sensors collecting data. Sometimes the most extraordinary discoveries happen when we pay attention to the details, like how I notice every little thing about you. ✨🔬",
+            "Did you know F1 teams can change all four wheels in under 3 seconds? Each component working in perfect harmony. Sometimes in life, you discover someone rare and beautiful who stands apart from everything else, just like you do. ⚡💎",
+            "F1 engineering combines art and science - every component designed with purpose and beauty. Some things in life are just naturally well-designed, possessing both intelligence and grace. That's exactly how I see you, Evita. 🔧🎨",
             "F1 has raced on some of the world's most iconic circuits for decades. Some treasures are worth protecting and cherishing, their beauty growing more apparent with each passing season. �📚",
-            "F1 is a global sport with fans speaking dozens of languages, yet the excitement translates universally. Communication transcends language barriers when there's genuine understanding. Sometimes a smile says more than words ever could. 🌍😊",
-            "F1 drivers often say that racing is about finding the perfect line through each corner. In life, sometimes the perfect path isn't the obvious one - it's the one that feels right in your heart. 🛣️💫",
-            "This trivia journey ends, but every ending is also a beginning. Thank you for racing through these questions. Here's to new adventures and the roads yet to be discovered. 🏁🌟"
+            "F1 is a global sport with fans speaking dozens of languages, yet the excitement translates universally. Communication transcends language barriers when there's genuine understanding. Your smile says more than words ever could, Evita. 🌍😊",
+            "F1 drivers often say that racing is about finding the perfect line through each corner. In life, sometimes the perfect path isn't the obvious one - it's the one that leads me to you, beautiful Evita. 🛣️💫",
+            "This trivia journey ends, but every ending is also a beginning. Thank you for racing through these questions with me, Evita. Here's to new adventures and the roads we might discover together. 🏁🌟"
         ];
         
         this.initializeGame();
@@ -301,13 +301,13 @@ class F1HeartsTrivia {
         
         let message = '';
         if (this.messagesUnlocked === this.secretMessages.length) {
-            message = `🎉 Perfect Score! You've unlocked all ${this.messagesUnlocked} secret messages! Like a true F1 champion, you've mastered every turn and claimed victory. Each message was carefully crafted with interesting facts and thoughtful reflections. 🏆✨`;
+            message = `💕 Perfect Score, Evita! You've unlocked all ${this.messagesUnlocked} secret messages I wrote for you! Like a true F1 champion, you've mastered every turn and claimed my heart. Each message was carefully crafted with F1 facts and my genuine thoughts about you. ✨🏎️`;
         } else if (this.messagesUnlocked >= 7) {
-            message = `🏆 Excellent work! You unlocked ${this.messagesUnlocked} beautiful messages. Like a skilled F1 driver, you've shown great skill and determination. There's something poetic about the precision of motorsport. 💫`;
+            message = `� Excellent work, Evita! You unlocked ${this.messagesUnlocked} beautiful messages. Like a skilled F1 driver, you've shown grace and intelligence. There's something magical about watching you discover each message I've written just for you. 💫`;
         } else if (this.messagesUnlocked >= 4) {
-            message = `🏁 Good job! You unlocked ${this.messagesUnlocked} special messages. There's more to discover in the fascinating world of Formula 1. Every question holds new insights. 🌟`;
+            message = `🏁 Good job, beautiful! You unlocked ${this.messagesUnlocked} special messages. There's more to discover in this trivia I created thinking of you. Every question holds new insights about F1 and my admiration for you, Evita. 🌟`;
         } else {
-            message = `🚗 Nice try! You unlocked ${this.messagesUnlocked} messages. Every attempt brings you closer to mastering F1 trivia and discovering new perspectives. Keep racing forward! 💫`;
+            message = `🚗 Nice try, Evita! You unlocked ${this.messagesUnlocked} messages written with you in mind. Every attempt brings you closer to discovering all the thoughts I've hidden in this F1 trivia just for you. Keep racing forward! 💫`;
         }
         
         finalMessage.textContent = message;
